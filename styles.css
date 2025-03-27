@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Force Background Color to Prevent Transparency Issues */
+html, body {
+    background-color: #f8f7f2 !important;
+    color: black;
+    font-family: 'Lora', serif;
+    min-height: 100vh;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent Samsung Internet & Dark Mode from Modifying Colors */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #f8f7f2 !important;
+        color: black !important;
+    }
+}
+
+/* Extra Fix for Samsung Internet - Forces Background Rendering */
+body::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f8f7f2;
+    z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Candal', serif;
+    color: black;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.yellowLetters {
+    color: #D4AA64;
+}
+
+.brownLetters {
+    color: #5F432C;
+}
+
+.whiteLetters {
+    color: white;
+}
+
+/* Logo */
+.logo {
+    max-width: 160px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 63px;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #C2868D !important;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navbar-toggler {
+    margin-left: 20px;
+}
+
+/* Content */
+.content {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.main-content {
+    width: 100%;
+    text-align: center;
+}
+
+.main-content.single {
+    font-size: 1.1em;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+/* Responsive Fixes for Mobile */
+@media only screen and (max-width: 934px) {
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main-content.single {
+        padding: 20px 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #D4AA64;
+    margin-top: 30px;
+    height: 60px;
+}
